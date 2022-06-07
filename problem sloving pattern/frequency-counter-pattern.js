@@ -40,3 +40,28 @@ function same(arr1, arr2){
 }
 
 same([1,2,4],[4,1,8]) // O(n) - time complexity
+
+
+/**
+ * Frequency counter pattern for string
+*/
+
+function validString(first, sec) {
+  const lookup = {};
+  for (let i = 0; i < first.length; i++) {
+    const letter = first[i];
+    lookup[letter] = lookup[letter] ? lookup[letter] += 1 : lookup[letter] = 1;
+  }
+  console.log("lookup created object", lookup);
+  for (let i = 0; i < sec.length; i++) {
+    const letter = sec[i];
+    if (!lookup[letter]) {
+      return false;
+    } else {
+      lookup[letter] = -1;
+    }
+  }
+  return true;
+}
+
+validString("pattern", "ternpat");
