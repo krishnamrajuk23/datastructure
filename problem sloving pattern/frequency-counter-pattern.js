@@ -15,7 +15,6 @@
 // }
 //same([1,2,4],[4,1,8]) // O(n^2) solution - time complexity
 
-
 function same(arr1, arr2){
     if(arr1.length !== arr2.length){
         return false;
