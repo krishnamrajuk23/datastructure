@@ -18,3 +18,6 @@ Queue.prototype.size = function () {
 var myWeeklyMenu = new Queue();
 
 myWeeklyMenu.enqueue("name", "raju");
+myWeeklyMenu.dequeue();
+
+console.log(this.storage);
