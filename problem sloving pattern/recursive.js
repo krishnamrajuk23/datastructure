@@ -22,3 +22,18 @@ var factorial = function (n) {
 }
 
 console.log(factorial(5));
+
+/**
+ * Recursive function takes array and reverse the array
+ */
+var reversedArray = [];
+const reverseArray = function (arr) {
+  if (arr.length > 0) {
+    reversedArray.push(arr.pop);
+    reverseArray(arr)
+  }
+  return;
+}
+
+arr = [1, 2, 4, 5, 6, 7]
+reverseArray(arr)
