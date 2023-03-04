@@ -35,5 +35,24 @@ const reverseArray = function (arr) {
   return;
 }
 
-arr = [1, 2, 4, 5, 6, 7]
-reverseArray(arr)
+arr = [1, 2, 4, 5, 6, 7];
+reverseArray(arr);
+
+
+/**
+ * take an array, num and multiple each value of array with the num and print the result
+ */
+const recursiveFun = function (arr, num) {
+  const finalResult = [];
+  const arrMulWithNum = (arr, num) => {
+    if (arr.length > 0) {
+      const value = arr.shift();
+      finalResult.push(value * num);
+      arrMulWithNum(arr, num);
+    }
+    return;
+  }
+  arrMulWithNum(arr, num);
+  return finalResult;
+}
+console.log(recursiveFun([1, 2, 3], 3))
